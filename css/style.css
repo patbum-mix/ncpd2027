@@ -582,3 +582,138 @@ body.no-scroll { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) { .news-skeleton { animation: none; } }
 @media (max-width: 900px) { .home-news .news-grid > :nth-child(3) { display: none; } }
 @media (max-width: 600px) { .home-news .news-grid > :nth-child(3) { display: flex; } .news-skeleton { min-height: 300px; } }
+
+/* =========================================================
+   เครื่องมือการเข้าถึง (แถบด้านบน / หน้าต่างข้อมูล / แถบแจ้ง)
+   ========================================================= */
+.a11y-bar { background: var(--brown-dark); color: var(--white); font-size: .9rem; }
+.a11y-inner { display: flex; justify-content: flex-end; align-items: center; flex-wrap: wrap; gap: 8px 14px; min-height: 44px; padding: 4px 0; }
+.a11y-group { display: flex; align-items: center; gap: 6px; }
+.a11y-label { margin-right: 4px; opacity: .9; }
+.a11y-btn {
+  font: inherit; font-weight: 600; cursor: pointer; line-height: 1;
+  min-width: 36px; min-height: 34px; padding: 6px 10px; border-radius: 8px;
+  background: rgba(255, 255, 255, .12); color: var(--white); border: 1px solid rgba(255, 255, 255, .35);
+}
+.a11y-btn:hover { background: rgba(255, 255, 255, .25); }
+.a11y-btn:disabled { opacity: .4; cursor: not-allowed; }
+.a11y-btn[aria-pressed="true"] { background: #ffe14d; color: #000; border-color: #ffe14d; }
+.a11y-btn[data-a11y="smaller"] { font-size: .85em; }
+.a11y-btn[data-a11y="bigger"] { font-size: 1.15em; }
+.a11y-wide { display: inline-flex; align-items: center; gap: 6px; }
+.a11y-bar :focus-visible { outline-color: #ffe14d; }
+
+.a11y-dialog {
+  width: min(720px, 100% - 32px); max-height: min(86vh, 900px); padding: 0;
+  border: 0; border-radius: 24px; box-shadow: 0 30px 80px rgba(0,0,0,.35);
+  color: var(--text); background: var(--white);
+}
+.a11y-dialog::backdrop { background: rgba(30, 10, 25, .6); }
+.a11y-dialog[open] { display: flex; flex-direction: column; }
+.a11y-dialog-head {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 20px 24px; background: linear-gradient(135deg, var(--pink-dark), var(--brown)); color: var(--white);
+}
+.a11y-dialog-head h2 { margin: 0; font-size: 1.4rem; }
+.a11y-close {
+  width: 40px; height: 40px; border-radius: 50%; border: 0; cursor: pointer; flex-shrink: 0;
+  background: rgba(255,255,255,.18); color: var(--white); font-size: 1.1rem;
+}
+.a11y-close:hover { background: rgba(255,255,255,.32); }
+.a11y-dialog-body { padding: 22px 26px 28px; overflow-y: auto; }
+.a11y-intro { margin-top: 0; color: var(--text-muted); }
+.a11y-dialog-body h3 { color: var(--brown); font-size: 1.15rem; margin: 22px 0 10px; }
+.a11y-list { margin: 0; padding-left: 1.3em; }
+.a11y-list li { margin-bottom: 8px; }
+.a11y-keys { margin: 0; display: grid; gap: 8px; }
+.a11y-keys div { display: grid; grid-template-columns: 150px 1fr; gap: 12px; align-items: baseline; }
+.a11y-keys dd { margin: 0; color: var(--text-muted); }
+kbd {
+  display: inline-block; padding: 2px 8px; border-radius: 6px; font-family: inherit; font-size: .88em; font-weight: 600;
+  background: var(--pink-pale); border: 1px solid rgba(184, 50, 122, .3); box-shadow: 0 2px 0 rgba(184, 50, 122, .2);
+}
+
+.a11y-notice {
+  position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); z-index: 90;
+  width: min(760px, 100% - 32px);
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  padding: 14px 18px; border-radius: 18px;
+  background: var(--white); color: var(--text);
+  border: 2px solid var(--pink-dark); box-shadow: 0 16px 40px rgba(80, 10, 40, .25);
+}
+.a11y-notice p { margin: 0; flex: 1 1 280px; font-size: .97rem; }
+.a11y-notice-icon {
+  width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; flex-shrink: 0;
+  background: var(--pink-dark); color: var(--white); font-size: 1.3rem;
+}
+.a11y-notice-actions { display: flex; gap: 8px; }
+.a11y-notice-actions button {
+  font: inherit; font-weight: 600; cursor: pointer; padding: 8px 16px; border-radius: 999px;
+  border: 1.5px solid var(--pink-dark);
+}
+.a11y-notice-more { background: var(--pink-dark); color: var(--white); }
+.a11y-notice-close { background: var(--white); color: var(--pink-dark); }
+
+@media (max-width: 600px) {
+  .a11y-inner { justify-content: center; }
+  .a11y-label { display: none; }
+  .a11y-keys div { grid-template-columns: 1fr; gap: 2px; }
+  .a11y-notice { bottom: 12px; }
+  .a11y-notice-actions { width: 100%; }
+  .a11y-notice-actions button { flex: 1; }
+}
+
+/* =========================================================
+   โหมดสีตัดกันสูง (เปิดจากปุ่มบนแถบการเข้าถึง)
+   ========================================================= */
+html.hc body,
+html.hc body *:not(img):not(svg):not(svg *) {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+html.hc a, html.hc a * { color: #ffe14d !important; text-decoration: underline !important; }
+html.hc button, html.hc .btn, html.hc .btn-read, html.hc .dl, html.hc .chip, html.hc .share,
+html.hc .nav-cta, html.hc .home-news-all, html.hc .chip-nav a, html.hc .a11y-btn {
+  border: 2px solid #ffe14d !important; color: #ffe14d !important;
+}
+html.hc .a11y-btn[aria-pressed="true"], html.hc .chip.is-active, html.hc .main-nav a[aria-current="page"] {
+  background: #ffe14d !important; color: #000 !important;
+}
+html.hc :focus-visible { outline: 3px solid #00e5ff !important; outline-offset: 3px; }
+html.hc .menu-icon, html.hc .menu-icon::before, html.hc .menu-icon::after { background: #fff !important; }
+html.hc .deco, html.hc .news-skeleton { display: none !important; }
+html.hc .partner-grid li, html.hc .brand, html.hc .logos span { background: #fff !important; border-radius: 12px; }
+html.hc .brand { padding: 4px 8px; }
+html.hc .tl-item::before { background: #ffe14d !important; color: #000 !important; box-shadow: none !important; }
+html.hc .timeline::before { background: #fff !important; }
+html.hc .tl-meta time, html.hc .news-tag, html.hc .photo-badge, html.hc .tl-item.is-next .tl-status {
+  border: 1.5px solid #fff !important; padding: 2px 10px; border-radius: 999px;
+}
+html.hc .tl-item.is-past { opacity: 1 !important; }
+html.hc .dl::before { background: #ffe14d !important; }
+html.hc .form-icon { background: #fff !important; }
+html.hc .gallery-more { background: rgba(0,0,0,.75) !important; }
+html.hc .news-search input { background-image: none !important; padding-left: 16px !important; }
+html.hc .hero, html.hc .page-hero { border-bottom: 2px solid #fff !important; }
+html.hc .a11y-dialog { border: 2px solid #fff !important; }
+
+/* เก็บงานเครื่องมือการเข้าถึง */
+.a11y-ico { width: 18px; height: 18px; flex-shrink: 0; }
+.a11y-ico-lg { width: 26px; height: 26px; vertical-align: -4px; }
+.a11y-dialog-head h2 { display: flex; align-items: center; gap: 10px; }
+.a11y-notice-icon .a11y-ico { width: 24px; height: 24px; }
+html.hc .tl-item.is-next { outline-color: #ffe14d !important; }
+@media (max-width: 600px) {
+  .a11y-inner { flex-wrap: nowrap; gap: 6px; }
+  .a11y-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .a11y-wide { padding: 6px 10px; }
+  .a11y-notice { padding: 12px 14px; gap: 10px; }
+  .a11y-notice-icon { display: none; }
+  .a11y-notice p { font-size: .92rem; }
+}
+/* รองรับตัวอักษรขนาดใหญ่ (ก+) โดยไม่ล้นจอ */
+.contact-list dd, .news-title, .article-title, .tl-title { overflow-wrap: anywhere; }
+.cd-box { width: auto; min-width: clamp(70px, 14vw, 140px); padding-inline: 10px; }
