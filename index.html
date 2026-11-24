@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCPD 2027 — สัมมนาวิชาการระดับชาติด้านคนพิการ ครั้งที่ 19</title>
+  <meta name="description" content="โครงการสัมมนาวิชาการระดับชาติด้านคนพิการ ครั้งที่ 19 ประจำปี 2570 (NCPD 2027) วันที่ 19–20 สิงหาคม 2570 ณ มหาวิทยาลัยขอนแก่น">
+
+  <!-- ฟอนต์จาก Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ปุ่มข้ามไปเนื้อหา (สำหรับผู้ใช้คีย์บอร์ด / โปรแกรมอ่านหน้าจอ) -->
+  <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+
+  <!-- ===================== เมนูด้านบน ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="NCPD 2027 หน้าหลัก">
+        <img src="images/logo-ncpd.png" alt="โลโก้ NCPD">
+        <img src="images/logo-msdhs.png" alt="โลโก้กระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์">
+        <img src="images/logo-kku.png" alt="โลโก้มหาวิทยาลัยขอนแก่น">
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span class="sr-only">เปิดเมนู</span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="เมนูหลัก">
+        <ul>
+          <li><a href="index.html" aria-current="page">หน้าหลัก</a></li>
+          <li><a href="schedule.html">กำหนดการ</a></li>
+          <li><a href="news.html">ข่าวสาร</a></li>
+          <li><a href="schedule.html#forms">แบบฟอร์ม</a></li>
+          <li><a href="#" class="nav-cta" data-link="register">ลงทะเบียน</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== ส่วนหัว (Hero) ===================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <h1 id="hero-title">
+          โครงการสัมมนาวิชาการระดับชาติด้านคนพิการ ครั้งที่ 19
+          <span class="hero-year">ประจำปี 2570</span>
+        </h1>
+        <p class="hero-en">The 19<sup>th</sup> National Conference on Persons with Disabilities</p>
+
+        <ul class="hero-meta">
+          <li>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm-2 8h14v10H5V10zm2 2v2h2v-2H7zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2z"/></svg>
+            <time datetime="2027-08-19">19 – 20 สิงหาคม 2570</time>
+          </li>
+          <li>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+            มหาวิทยาลัยขอนแก่น
+          </li>
+        </ul>
+
+        <!-- ตัวนับถอยหลัง: ตั้งวันเวลาเริ่มงานได้ที่ js/main.js -->
+        <div class="countdown" role="timer" aria-label="นับถอยหลังสู่วันจัดงาน">
+          <div class="cd-box"><span class="cd-num" id="cd-days">--</span><span class="cd-label">วัน</span></div>
+          <div class="cd-box"><span class="cd-num" id="cd-hours">--</span><span class="cd-label">ชั่วโมง</span></div>
+          <div class="cd-box"><span class="cd-num" id="cd-minutes">--</span><span class="cd-label">นาที</span></div>
+          <div class="cd-box"><span class="cd-num" id="cd-seconds">--</span><span class="cd-label">วินาที</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ความเป็นมา ===================== -->
+    <section class="about section" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-text">
+          <h2 id="about-title" class="section-title">ความเป็นมาของการจัดงาน</h2>
+          <p>
+            โครงการสัมมนาวิชาการระดับชาติด้านคนพิการ ครั้งที่ 19 ประจำปี 2570
+            (The 19th National Conference on Persons with Disabilities: NCPD 2027)
+            จัดขึ้น<span class="highlight">ภายใต้แนวคิด "From Learning to Earning: Innovation for Persons with Disabilities
+            in an Inclusive Society" หรือ "การเรียนรู้ สู่การสร้างรายได้ด้วยนวัตกรรมเพื่อคนพิการ
+            ในสังคมที่ทุกคนสามารถเข้าถึง มีส่วนร่วม และเท่าเทียม"</span>
+            โดยมีที่มาจากการขับเคลื่อนนโยบายการพัฒนาคุณภาพชีวิตคนพิการของประเทศ ตามยุทธศาสตร์ชาติ 20 ปี
+            และนโยบายของกระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์ ที่มุ่งส่งเสริมโอกาสทางการศึกษา
+            การมีงานทำ การสร้างรายได้ และการพึ่งพาตนเองอย่างยั่งยืนของคนพิการ
+            ผ่านการบูรณาการความร่วมมือจากทุกภาคส่วน ทั้งภาครัฐ ภาคเอกชน สถาบันการศึกษา และภาคประชาสังคม
+          </p>
+        </div>
+        <div class="about-media">
+          <img src="images/about.jpg" alt="พิธีส่งมอบธงเจ้าภาพการจัดงาน NCPD" class="shape-photo" loading="lazy">
+          <span class="deco" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="container about-more">
+        <p>
+          <strong>มหาวิทยาลัยขอนแก่น</strong> ในฐานะสถาบันอุดมศึกษาหลักของภาคตะวันออกเฉียงเหนือ
+          ได้ตระหนักถึงโจทย์ท้าทายนี้ จึงได้ขับเคลื่อนแนวคิดดังกล่าวผ่าน
+          <strong>ยุทธศาสตร์ที่ 10 การบริการวิชาการเพื่อสร้างประโยชน์ให้สังคม (Societal Contribution)
+          โดยเน้นการสนับสนุนและเสริมสร้างความเข้มแข็งให้กับชุมชน (Community Support)</strong>
+          ผ่านการบูรณาการองค์ความรู้ เทคโนโลยี และนวัตกรรมอันเป็นอัตลักษณ์ของมหาวิทยาลัย
+          เพื่อยกระดับคุณภาพชีวิตและดูแลสุขภาพของกลุ่มเปราะบาง ซึ่งสอดคล้องกับเป้าหมายการพัฒนาที่ยั่งยืน
+          <strong>(Sustainable Development Goals: SDGs)</strong> ขององค์การสหประชาชาติ
+          โดยปัจจุบันมหาวิทยาลัยขอนแก่นมีทั้งกลุ่มวิจัยเฉพาะทาง คณะวิชา และโครงการบริการวิชาการที่หลากหลาย
+          ที่ประสบความสำเร็จในการสร้างอาชีพ พัฒนาคุณภาพชีวิต และคืนศักดิ์ศรีความเป็นมนุษย์ให้แก่คนพิการ
+          อย่างเป็นรูปธรรมในหลากหลายชุมชน
+        </p>
+        <p>
+          ด้วยฐานรากทางวิชาการที่เข้มแข็ง นวัตกรรมพร้อมใช้ที่ตอบโจทย์บริบทสังคม และเครือข่ายความร่วมมือที่เหนียวแน่นนี้
+          <strong>มหาวิทยาลัยขอนแก่นจึงทำหน้าที่เป็น "เจ้าภาพร่วม" ในการจัดสัมมนาวิชาการระดับชาติด้านคนพิการ ประจำปี 2570</strong>
+          เพื่อเป็นเวทีกลางระดับประเทศในการแลกเปลี่ยนเรียนรู้ ขยายผลองค์ความรู้จากงานวิจัยสู่การปฏิบัติ
+          และร่วมกำหนดทิศทางนโยบายสาธารณะในการพัฒนาคุณภาพชีวิตคนพิการอย่างยั่งยืนสืบไป
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== ลงทะเบียน ===================== -->
+    <section class="register section" aria-labelledby="register-title">
+      <div class="container register-grid">
+        <div class="register-actions">
+          <h2 id="register-title" class="sr-only">ลงทะเบียนและดาวน์โหลดแบบฟอร์ม</h2>
+          <a href="#" class="btn btn-pink" data-link="register">ลงทะเบียน</a>
+          <a href="schedule.html#forms" class="btn btn-brown">ดาวน์โหลดแบบฟอร์ม</a>
+        </div>
+        <div class="register-media">
+          <img src="images/register.jpg" alt="" class="shape-photo" loading="lazy">
+          <span class="deco" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ข่าวสารล่าสุด ===================== -->
+    <section id="home-news" class="home-news section" aria-labelledby="home-news-title">
+      <div class="container">
+        <div class="home-news-head">
+          <div>
+            <p class="home-news-eyebrow" lang="en">Latest News</p>
+            <h2 id="home-news-title" class="section-title">ข่าวสารล่าสุด</h2>
+          </div>
+          <a href="news.html" class="home-news-all">ดูข่าวทั้งหมด <span aria-hidden="true">→</span></a>
+        </div>
+        <ul class="news-grid" id="home-news-list" aria-busy="true">
+          <li class="news-skeleton" aria-hidden="true"></li>
+          <li class="news-skeleton" aria-hidden="true"></li>
+          <li class="news-skeleton" aria-hidden="true"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== ภาคีเครือข่าย ===================== -->
+    <section class="partners section" aria-labelledby="partners-title">
+      <div class="container">
+        <h2 id="partners-title" class="section-title">ภาคีเครือข่าย</h2>
+        <p class="section-sub">การสัมมนาวิชาการระดับชาติด้านคนพิการ ครั้งที่ 19 ประจำปี 2570</p>
+
+        <!-- เพิ่ม/ลบโลโก้: ก๊อปบรรทัด <li> แล้วเปลี่ยนชื่อไฟล์และ alt -->
+        <ul class="partner-grid">
+          <li><img src="images/partners/01-msdhs.png" alt="กระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์" loading="lazy"></li>
+          <li><img src="images/partners/02-udru.png" alt="มหาวิทยาลัยราชภัฏอุดรธานี" loading="lazy"></li>
+          <li><img src="images/partners/03-kmutt.png" alt="มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี" loading="lazy"></li>
+          <li><img src="images/partners/04-rmutt.png" alt="มหาวิทยาลัยเทคโนโลยีราชมงคลธัญบุรี" loading="lazy"></li>
+          <li><img src="images/partners/05-partner-05.png" alt="มหาวิทยาลัยนเรศวร" loading="lazy"></li>
+          <li><img src="images/partners/06-partner-06.png" alt="มหาวิทยาลัยแม่ฟ้าหลวง" loading="lazy"></li>
+          <li><img src="images/partners/07-partner-07.png" alt="สถาบันสิรินธรเพื่อการฟื้นฟูสมรรถภาพทางการแพทย์แห่งชาติ" loading="lazy"></li>
+          <li><img src="images/partners/08-chula.png" alt="จุฬาลงกรณ์มหาวิทยาลัย" loading="lazy"></li>
+          <li><img src="images/partners/09-tu.png" alt="มหาวิทยาลัยธรรมศาสตร์" loading="lazy"></li>
+          <li><img src="images/partners/10-mahidol.png" alt="มหาวิทยาลัยมหิดล" loading="lazy"></li>
+          <li><img src="images/partners/11-kmutnb.png" alt="มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ" loading="lazy"></li>
+          <li><img src="images/partners/12-su.png" alt="มหาวิทยาลัยศิลปากร" loading="lazy"></li>
+          <li><img src="images/partners/13-cpru.png" alt="มหาวิทยาลัยราชภัฏชัยภูมิ" loading="lazy"></li>
+          <li><img src="images/partners/14-lru.png" alt="มหาวิทยาลัยราชภัฏเลย" loading="lazy"></li>
+          <li><img src="images/partners/15-sskru.png" alt="มหาวิทยาลัยราชภัฏศรีสะเกษ" loading="lazy"></li>
+          <li><img src="images/partners/16-bru.png" alt="มหาวิทยาลัยราชภัฏบุรีรัมย์" loading="lazy"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== ติดต่อ ===================== -->
+    <section class="contact section" aria-labelledby="contact-title">
+      <div class="container">
+        <p class="contact-eyebrow" lang="en">Contact</p>
+        <h2 id="contact-title" class="section-title">สอบถามรายละเอียดเพิ่มเติม</h2>
+
+        <div class="contact-card">
+          <h3>ฝ่ายประสานงานโครงการ</h3>
+          <p class="contact-note">ทีมงานพร้อมตอบทุกคำถามเกี่ยวกับการส่งบทความ การลงทะเบียน และการเข้าร่วม</p>
+          <dl class="contact-list">
+            <div><dt>หน่วยงาน</dt><dd>ศูนย์........................................ (รอข้อมูล)</dd></div>
+            <div><dt>อีเมล</dt><dd><a href="mailto:ncpd2027@gmail.com">ncpd2027@gmail.com</a></dd></div>
+            <div><dt>โทรศัพท์</dt><dd>0-xxxx-xxxx (รอข้อมูล)</dd></div>
+            <div><dt>เวลาทำการ</dt><dd>จันทร์ – ศุกร์ เวลา 08:30 – 16:30 น.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2570 โครงการสัมมนาวิชาการระดับชาติด้านคนพิการ ครั้งที่ 19 · มหาวิทยาลัยขอนแก่น</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/news.js"></script>
+  <script src="js/home-news.js"></script>
+</body>
+</html>

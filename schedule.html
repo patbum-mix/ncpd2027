@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>กำหนดการ — NCPD 2027</title>
+  <meta name="description" content="กำหนดการส่งบทความวิชาการ การประกวดนวัตกรรม Hackathon และแบบฟอร์มดาวน์โหลด งานสัมมนาวิชาการระดับชาติด้านคนพิการ ครั้งที่ 19 (NCPD 2027)">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+
+  <!-- ===================== เมนูด้านบน (เหมือนทุกหน้า) ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="NCPD 2027 หน้าหลัก">
+        <img src="images/logo-ncpd.png" alt="โลโก้ NCPD">
+        <img src="images/logo-msdhs.png" alt="โลโก้กระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์">
+        <img src="images/logo-kku.png" alt="โลโก้มหาวิทยาลัยขอนแก่น">
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span class="sr-only">เปิดเมนู</span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="เมนูหลัก">
+        <ul>
+          <li><a href="index.html">หน้าหลัก</a></li>
+          <li><a href="schedule.html" aria-current="page">กำหนดการ</a></li>
+          <li><a href="news.html">ข่าวสาร</a></li>
+          <li><a href="schedule.html#forms">แบบฟอร์ม</a></li>
+          <li><a href="#" class="nav-cta" data-link="register">ลงทะเบียน</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== หัวเรื่องหน้า ===================== -->
+    <section class="page-hero page-hero--schedule" aria-labelledby="page-title">
+      <div class="container">
+        <p class="page-hero-eyebrow">NCPD 2027 · Important Dates</p>
+        <h1 id="page-title">กำหนดการ</h1>
+        <p class="page-hero-sub">ติดตามวันสำคัญของการส่งบทความ การประกวดนวัตกรรม และ Hackathon</p>
+
+        <!-- ลิงก์ลัดไปแต่ละหมวด -->
+        <nav class="chip-nav" aria-label="ไปยังหมวดกำหนดการ">
+          <a href="#paper">การส่งบทความวิชาการ</a>
+          <a href="#innovation">การประกวดนวัตกรรม</a>
+          <a href="#hackathon">Hackathon</a>
+          <a href="#forms">แบบฟอร์ม</a>
+        </nav>
+      </div>
+    </section>
+
+    <!--
+      =========================================================
+      วิธีแก้ไทม์ไลน์
+      - แต่ละขั้นคือ <li class="tl-item" data-date="ปี ค.ศ.-เดือน-วัน">
+      - data-date ใช้คำนวณ "อีกกี่วัน / สิ้นสุดแล้ว" อัตโนมัติ
+      - ข้อความวันที่ภาษาไทยใน <time> แก้ให้ตรงกับ data-date ด้วย
+      ⚠️ วันที่ด้านล่างเป็น "ตัวอย่าง" รอยืนยันจากทีมจัดงาน
+      =========================================================
+    -->
+
+    <!-- ===================== 1) การส่งบทความวิชาการ ===================== -->
+    <section id="paper" class="schedule-block section" aria-labelledby="paper-title">
+      <div class="container schedule-grid">
+        <div>
+          <h2 id="paper-title" class="section-title">การส่งบทความวิชาการ</h2>
+          <p class="schedule-lead">บทคัดย่อ (กึ่งวิชาการ) และบทความฉบับเต็ม (วิชาการ)</p>
+
+          <ol class="timeline">
+            <li class="tl-item" data-date="2026-12-20">
+              <h3 class="tl-title">ปิดรับบทคัดย่อและบทความฉบับเต็ม</h3>
+              <p class="tl-en" lang="en">Abstract &amp; Full Paper Submission Deadline</p>
+              <p class="tl-meta"><time datetime="2026-12-20">20 ธันวาคม 2569</time> <span class="tl-status"></span></p>
+            </li>
+            <li class="tl-item" data-date="2027-01-05">
+              <h3 class="tl-title">ประกาศผลการพิจารณาบทความ</h3>
+              <p class="tl-en" lang="en">Abstract &amp; Full Paper Acceptance Notification</p>
+              <p class="tl-meta"><time datetime="2027-01-05">5 มกราคม 2570</time> <span class="tl-status"></span></p>
+            </li>
+            <li class="tl-item" data-date="2027-01-15">
+              <h3 class="tl-title">ส่งบทความฉบับแก้ไข (ฉบับสมบูรณ์)</h3>
+              <p class="tl-en" lang="en">Final Abstract &amp; Full Paper Submission</p>
+              <p class="tl-meta"><time datetime="2027-01-15">15 มกราคม 2570</time> <span class="tl-status"></span></p>
+            </li>
+            <li class="tl-item" data-date="2027-01-25">
+              <h3 class="tl-title">ประกาศผลและตอบรับเข้าร่วมนำเสนอ</h3>
+              <p class="tl-en" lang="en">Final Acceptance &amp; Presentation Schedule</p>
+              <p class="tl-meta"><time datetime="2027-01-25">25 มกราคม 2570</time> <span class="tl-status"></span></p>
+            </li>
+          </ol>
+        </div>
+        <div class="schedule-media">
+          <img src="images/sch-paper.jpg" alt="" class="shape-photo" loading="lazy">
+          <span class="deco" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2) การประกวดนวัตกรรม ===================== -->
+    <section id="innovation" class="schedule-block schedule-block--alt section" aria-labelledby="innovation-title">
+      <div class="container schedule-grid schedule-grid--reverse">
+        <div>
+          <h2 id="innovation-title" class="section-title">การประกวดนวัตกรรม</h2>
+          <p class="schedule-lead">Inclusive Design Challenge — นวัตกรรมเพื่อคนพิการ</p>
+
+          <ol class="timeline">
+            <li class="tl-item" data-date="2026-12-25">
+              <h3 class="tl-title">ปิดรับข้อเสนอโครงการ (รอบที่ 1)</h3>
+              <p class="tl-en" lang="en">Proposal / Concept Screening Deadline</p>
+              <p class="tl-meta"><time datetime="2026-12-25">25 ธันวาคม 2569</time> <span class="tl-status"></span></p>
+            </li>
+            <li class="tl-item" data-date="2027-01-08">
+              <h3 class="tl-title">ประกาศผลทีมที่ผ่านเข้ารอบ</h3>
+              <p class="tl-en" lang="en">Shortlisted Teams Announcement</p>
+              <p class="tl-meta"><time datetime="2027-01-08">8 มกราคม 2570</time> <span class="tl-status"></span></p>
+            </li>
+            <li class="tl-item" data-date="2027-02-05">
+              <h3 class="tl-title">ส่งผลงานต้นแบบ (รอบที่ 2)</h3>
+              <p class="tl-en" lang="en">Prototype Development Submission</p>
+              <p class="tl-meta"><time datetime="2027-02-05">5 กุมภาพันธ์ 2570</time> <span class="tl-status"></span></p>
+            </li>
+            <li class="tl-item" data-date="2027-02-18">
+              <h3 class="tl-title">นำเสนอผลงานและตัดสินรอบสุดท้าย</h3>
+              <p class="tl-en" lang="en">Final Pitching &amp; Award Ceremony</p>
+              <p class="tl-meta"><time datetime="2027-02-18">18 กุมภาพันธ์ 2570</time> <span class="tl-status"></span></p>
+            </li>
+          </ol>
+        </div>
+        <div class="schedule-media">
+          <img src="images/sch-innovation.jpg" alt="" class="shape-photo shape-photo--flip" loading="lazy">
+          <span class="deco deco--left" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3) Hackathon ===================== -->
+    <section id="hackathon" class="schedule-block section" aria-labelledby="hackathon-title">
+      <div class="container schedule-grid">
+        <div>
+          <h2 id="hackathon-title" class="section-title" lang="en">Hackathon</h2>
+          <p class="schedule-lead">ระดมไอเดียและพัฒนาต้นแบบเพื่อการเข้าถึงอย่างเท่าเทียม</p>
+
+          <ol class="timeline">
+            <li class="tl-item" data-date="2027-01-10">
+              <h3 class="tl-title">ปิดรับสมัครทีม</h3>
+              <p class="tl-en" lang="en">Team Registration Deadline</p>
+              <p class="tl-meta"><time datetime="2027-01-10">10 มกราคม 2570</time> <span class="tl-status"></span></p>
+            </li>
+            <li class="tl-item" data-date="2027-01-20">
+              <h3 class="tl-title">ประกาศรายชื่อทีมที่ได้รับคัดเลือก</h3>
+              <p class="tl-en" lang="en">Selected Teams Announcement</p>
+              <p class="tl-meta"><time datetime="2027-01-20">20 มกราคม 2570</time> <span class="tl-status"></span></p>
+            </li>
+            <li class="tl-item" data-date="2027-02-01">
+              <h3 class="tl-title">ปฐมนิเทศและเวิร์กช็อปออนไลน์</h3>
+              <p class="tl-en" lang="en">Orientation &amp; Online Workshop</p>
+              <p class="tl-meta"><time datetime="2027-02-01">1 กุมภาพันธ์ 2570</time> <span class="tl-status"></span></p>
+            </li>
+            <li class="tl-item" data-date="2027-02-18">
+              <h3 class="tl-title">แข่งขันและนำเสนอผลงาน ณ มหาวิทยาลัยขอนแก่น</h3>
+              <p class="tl-en" lang="en">Hackathon Day &amp; Final Pitch</p>
+              <p class="tl-meta"><time datetime="2027-02-18">18 – 19 กุมภาพันธ์ 2570</time> <span class="tl-status"></span></p>
+            </li>
+          </ol>
+        </div>
+        <div class="schedule-media">
+          <img src="images/sch-hackathon.jpg" alt="" class="shape-photo" loading="lazy">
+          <span class="deco" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== แบบฟอร์มดาวน์โหลด ===================== -->
+    <!--
+      วิธีใส่ไฟล์: นำไฟล์ไปวางในโฟลเดอร์ files/ โดยตั้งชื่อให้ตรงกับลิงก์ด้านล่าง
+      เช่น files/abstract-template.docx และ files/abstract-template.pdf
+    -->
+    <section id="forms" class="forms section" aria-labelledby="forms-title">
+      <div class="container">
+        <h2 id="forms-title" class="section-title">แบบฟอร์ม</h2>
+        <p class="section-sub">ดาวน์โหลดแม่แบบสำหรับการส่งบทความและการประกวดนวัตกรรม</p>
+
+        <ul class="form-grid">
+          <li class="form-card form-card--pink">
+            <div class="form-card-head">
+              <h3>Abstract Template</h3>
+              <span class="form-icon" aria-hidden="true"></span>
+            </div>
+            <p>สำหรับบทความกึ่งวิชาการ (Best Practice จากผู้ปฏิบัติงาน)</p>
+            <div class="form-actions">
+              <a class="dl dl-solid" href="files/abstract-template.docx" download>Word (.docx)<span class="sr-only"> แม่แบบบทคัดย่อ</span></a>
+              <a class="dl dl-outline" href="files/abstract-template.pdf" download>PDF<span class="sr-only"> แม่แบบบทคัดย่อ</span></a>
+            </div>
+          </li>
+
+          <li class="form-card form-card--orange">
+            <div class="form-card-head">
+              <h3>Full Paper Template</h3>
+              <span class="form-icon" aria-hidden="true"></span>
+            </div>
+            <p>สำหรับบทความวิชาการ (นำเสนอและเผยแพร่ผลงานวิจัยในสัมมนา)</p>
+            <div class="form-actions">
+              <a class="dl dl-solid" href="files/full-paper-template.docx" download>Word (.docx)<span class="sr-only"> แม่แบบบทความฉบับเต็ม</span></a>
+              <a class="dl dl-outline" href="files/full-paper-template.pdf" download>PDF<span class="sr-only"> แม่แบบบทความฉบับเต็ม</span></a>
+            </div>
+          </li>
+
+          <li class="form-card form-card--pink">
+            <div class="form-card-head">
+              <h3>Proposal / Concept Screening</h3>
+              <span class="form-icon" aria-hidden="true"></span>
+            </div>
+            <p>สำหรับการประกวดนวัตกรรม รอบที่ 1</p>
+            <div class="form-actions">
+              <a class="dl dl-solid" href="files/proposal-form.docx" download>Word (.docx)<span class="sr-only"> แบบฟอร์มข้อเสนอโครงการ</span></a>
+              <a class="dl dl-outline" href="files/proposal-form.pdf" download>PDF<span class="sr-only"> แบบฟอร์มข้อเสนอโครงการ</span></a>
+            </div>
+          </li>
+
+          <li class="form-card form-card--red">
+            <div class="form-card-head">
+              <h3>Prototype Development</h3>
+              <span class="form-icon" aria-hidden="true"></span>
+            </div>
+            <p>สำหรับการประกวดนวัตกรรม รอบที่ 2</p>
+            <div class="form-actions">
+              <a class="dl dl-solid" href="files/prototype-form.docx" download>Word (.docx)<span class="sr-only"> แบบฟอร์มผลงานต้นแบบ</span></a>
+              <a class="dl dl-outline" href="files/prototype-form.pdf" download>PDF<span class="sr-only"> แบบฟอร์มผลงานต้นแบบ</span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2570 โครงการสัมมนาวิชาการระดับชาติด้านคนพิการ ครั้งที่ 19 · มหาวิทยาลัยขอนแก่น</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

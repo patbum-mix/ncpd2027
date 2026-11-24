@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ข่าวสาร — NCPD 2027</title>
+  <meta name="description" content="ข่าวสารงานสัมมนาวิชาการระดับชาติด้านคนพิการ ครั้งที่ 19 (NCPD 2027)">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+
+  <!-- ===================== เมนูด้านบน (เหมือนทุกหน้า) ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="NCPD 2027 หน้าหลัก">
+        <img src="images/logo-ncpd.png" alt="โลโก้ NCPD">
+        <img src="images/logo-msdhs.png" alt="โลโก้กระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์">
+        <img src="images/logo-kku.png" alt="โลโก้มหาวิทยาลัยขอนแก่น">
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span class="sr-only">เปิดเมนู</span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="เมนูหลัก">
+        <ul>
+          <li><a href="index.html">หน้าหลัก</a></li>
+          <li><a href="schedule.html">กำหนดการ</a></li>
+          <li><a href="news.html" aria-current="page">ข่าวสาร</a></li>
+          <li><a href="schedule.html#forms">แบบฟอร์ม</a></li>
+          <li><a href="#" class="nav-cta" data-link="register">ลงทะเบียน</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- เนื้อหาข่าวจะถูกเติมโดย js/news.js ตาม ?id= ในลิงก์ -->
+    <article class="article" id="article" aria-busy="true">
+      <div class="container article-narrow">
+        <p class="news-loading">กำลังโหลดข่าว…</p>
+      </div>
+    </article>
+
+    <section class="section related" id="related-wrap" hidden aria-labelledby="related-title">
+      <div class="container">
+        <h2 id="related-title" class="section-title">ข่าวอื่น ๆ</h2>
+        <ul class="news-grid" id="related-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2570 โครงการสัมมนาวิชาการระดับชาติด้านคนพิการ ครั้งที่ 19 · มหาวิทยาลัยขอนแก่น</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/news.js"></script>
+</body>
+</html>
