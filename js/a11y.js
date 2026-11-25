@@ -11,7 +11,11 @@
   const DEFAULT_SIZE = 1;                  // index ของ 100%
 
   const root = document.documentElement;
-  let state = { size: DEFAULT_SIZE, contrast: false, noticeClosed: false };
+  let state = { size: DEFAULT_SIZE, contrast: false };
+  // แถบแจ้ง: ปิดแล้วจะไม่ขึ้นอีกเฉพาะ "การเข้าเว็บรอบนั้น" (ปิดแท็บ/เบราว์เซอร์แล้วเข้าใหม่ จะขึ้นอีก)
+  const NOTICE_KEY = "ncpd2027-a11y-notice-closed";
+  let noticeClosed = false;
+  try { noticeClosed = sessionStorage.getItem(NOTICE_KEY) === "1"; } catch {}
   try { Object.assign(state, JSON.parse(localStorage.getItem(KEY)) || {}); } catch {}
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch {} };
 
@@ -121,7 +125,7 @@
     dlg.addEventListener("close", () => { if (opener) opener.focus(); });
 
     /* ---------- แถบแจ้งครั้งแรก (ไม่บังจอ ไม่แย่งโฟกัส) ---------- */
-    if (!state.noticeClosed) {
+    if (!noticeClosed) {
       const note = document.createElement("div");
       note.className = "a11y-notice";
       note.setAttribute("role", "region");
@@ -135,7 +139,7 @@
         </div>`;
       document.body.appendChild(note);
       const closeNote = () => {
-        state.noticeClosed = true; save();
+        try { sessionStorage.setItem(NOTICE_KEY, "1"); } catch {}
         note.remove();
       };
       note.querySelector(".a11y-notice-close").addEventListener("click", closeNote);
